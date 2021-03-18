@@ -1,3 +1,10 @@
+import React from "react";
+import "./App.css";
+import { Switch, Route, Link } from "react-router-dom";
+
+//components
+/* import Details from "./Components/Details"; */
+import Homepage from './components/Homepage';
 import './App.css';
 
 function App() {
@@ -7,10 +14,14 @@ function App() {
         <Switch>
           
           <Route exact path="/" render={ ()=> <Homepage /> } />
-         {/*  <Route exact path="/details/:id" render={ (props)=> <Details {...props} /> } /> */}
-          <Route exact path= "/>city" component={City}/>
-          <Route path="*" component={PageNotFound} />
+          {/*  <Route exact path="/details/:id" render={ (props)=> <Details {...props} /> } /> */}
+          {/* <Route path="/details/:id">
+            <Details />
+          </Route> */}
 
+          {/* <Route exact path= "/>city" component={City}/> */}
+          {/* <Route path="*" component={PageNotFound} />
+ */}
         </Switch>
 
       </React.Fragment>
