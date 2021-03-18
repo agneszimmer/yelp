@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import "./city.css";
-import Card from ""../MuseumCard.js";
+import Card from ""../CityCard.js";
 import Map from "..CityMap.js"
 
 const City = () => {
