@@ -4,7 +4,7 @@ import { Switch, Route, Link } from "react-router-dom";
 
 //components
 import Details from "./Components/Details";
-import Homepage from './components/Homepage';
+import Homepage from './Components/Homepage';
 import './App.css';
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
           </Route>
 
           <Route exact path="/:city"></Route>
-          <Route path="*" component={PageNotFound} />
+         {/*  <Route path="*" component={PageNotFound} /> */}
          
         </Switch>
 
