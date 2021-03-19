@@ -29,7 +29,6 @@ return (
     <Header />
     <h1>hello</h1>
     <div className="container">
-      {museums.map()}
      { /*{museum.map(museum => */}
       <Card />
       <Map lat={city.lat} lon={city.lon} />    {/* lat & lon of museums[0] ??*/}
