@@ -45,8 +45,12 @@ const City = () => {
     <div>
       <YelpNav />
       <div className="container">
-        {museums.map((museum) => (<CityCard key={museum.id} museum={museum} />))}
-        <Map museums={museums} />
+        <div className="col">
+         {museums.map((museum) => (<CityCard key={museum.id} museum={museum} />))}
+        </div>
+        <div className="col">
+        <Map museums={museums} />          
+        </div>
       </div>
     
 
