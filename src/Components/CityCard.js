@@ -1,3 +1,5 @@
+import React from "react";
+
 const CityCard = ({name, img, link, theme}) => {
     return (
         <div className='row'>

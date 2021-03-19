@@ -1,5 +1,4 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
 
 const CityMap = ({ lat, lon }) => {
   return (
@@ -9,7 +8,7 @@ const CityMap = ({ lat, lon }) => {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
         />
-        {museum.map(museum => <Marker position={[lat, lon]}>
+        {museums.map(museum => <Marker position={[lat, lon]}>
           <Popup>
             <a href={museum.link}>{museum.name}</a>
           </Popup>
