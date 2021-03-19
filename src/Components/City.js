@@ -1,4 +1,5 @@
 
+
 import { useState, useEffect } from 'react';
 import CityCard from  "./CityCard.js";
 import Map from "./CityMap.js"
@@ -57,6 +58,7 @@ const City = () => {
 
   return (
     <div>
+
       <YelpNav />
       <div className="container">
  
@@ -67,12 +69,9 @@ const City = () => {
         <Map museums={museums} />          
         </div>
       </div>
-    
- 
 
     </div>
   );
 };
 
 export default City;
-
