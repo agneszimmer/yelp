@@ -4,7 +4,7 @@ import React, {useState, useEffect} from 'react';
 import YelpNav from './Navbar';
 import MuseumCard from './MuseumCard';
 
-import data from '../testing/Museums.json';
+/* import data from '../testing/Museums.json'; */
 
 const Homepage = () => {
     const [museums, setMuseums] = useState([]);
@@ -25,7 +25,7 @@ const Homepage = () => {
     /* const amount = '5';
     const query = getBestMuseum(amount); */
     getData()
-    .then(res => {
+    .then(data => {
         const museums =  data.map(item => {
             return {
                 id : item.id,
