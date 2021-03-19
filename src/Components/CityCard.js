@@ -1,6 +1,6 @@
-const CityCard = ({
-    
-    name, img, link, theme}) => {
+import React from "react";
+
+const CityCard = ({name, img, link, theme}) => {
     return (
         <div className='row'>
             <div className='col'>

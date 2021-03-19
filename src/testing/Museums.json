@@ -1,0 +1,87 @@
+[
+    {
+      "id": 1,
+      "name":"Museum Erdinge",
+      "City":{
+		 "id": 1,
+		 "name":"Berlin"
+		},
+	  "Rating":{
+		"quantity": "345",
+		"average": "4.6"
+		},
+      "Comments":[
+			{
+			 "id": 1,
+			 "text":"Beautiful Location",
+			 "date":"21-06-1989"
+			},
+			{
+			 "id": 2,
+			 "text":"Amazing",
+			 "date":"31-03-1993"
+			}
+		],
+		"Tags":[
+			{
+			 "id": 1,
+			 "text":"historic"
+			},
+			{
+			 "id": 1,
+			 "text":"kidsfriendly"
+			}
+		],
+		"image": "/images/museum1.jpg",
+		"address": "Street 1, central Berlin, 38122",
+		"longitude": "52.5200",
+		"latitude": "13.4050",
+		"phone": "155-47723252",
+		"link": "https://www.museumderdinge.de/",
+		"timings": "mon-fri 8am - 6pm",
+		"description": "The Werkbundarchiv – Museum der Dinge (Werkbund Archive – Museum of Things) chronicles the product culture of the 20th and 21st centuries, a culture marked by mass production and industrial manufacturing."
+				
+	},
+	{
+      "id": 2,
+      "name":"Museum Noname",
+      "City":{
+		 "id": 1,
+		 "name":"Braunschweig"
+		},
+	  "Rating":{
+		"quantity": "543",
+		"average": "4.8"
+		},
+      "Comments":[
+			{
+			 "id": 1,
+			 "text":"Peaceful Location",
+			 "date":"21-06-1989"
+			},
+			{
+			 "id": 2,
+			 "text":"Mega",
+			 "date":"31-03-1993"
+			}
+		],
+		"Tags":[
+			{
+			 "id": 1,
+			 "text":"modern"
+			},
+			{
+			 "id": 1,
+			 "text":"kidsfriendly"
+			}
+		],
+		"image": "/images/museum1.jpg",
+		"address": "Street 1, central Berlin, 38122",
+		"longitude": "52.5200",
+		"latitude": "13.4050",
+		"phone": "155-47723252",
+		"link": "https://www.museumderdinge.de/",
+		"timings": "mon-fri 8am - 6pm",
+		"description": "The Werkbundarchiv – Museum der Dinge (Werkbund Archive – Museum of Things) chronicles the product culture of the 20th and 21st centuries, a culture marked by mass production and industrial manufacturing."  
+		}      
+]
