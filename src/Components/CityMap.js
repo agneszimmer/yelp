@@ -1,21 +1,24 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
-const CityMap = ({ lat, lon }) => {
+const CityMap = ({ museums }) => {
+  console.log(museums)
   return (
     <div>
-      {/*
-      <MapContainer center={[lat, lon]} zoom={13} scrollWheelZoom={false}>
-        <TileLayer
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-        />
-        {/* {museums.map(museum => {<Marker position={[lat, lon]}>
-          <Popup>
-            <a href={museum.link}>{museum.name}</a>
-          </Popup>
-        </Marker>} 
-      </MapContainer>
-        */}
+
+
+      <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+      <TileLayer
+        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
+      {museums.map((museum) => (<Marker position={[museum.lat, museum.lon]}>
+        <Popup>
+          {museum.name} <br /> {museum.link}
+        </Popup>
+      </Marker>))}
+    </MapContainer>
+
+
     </div>
   );
 };

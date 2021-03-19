@@ -5,14 +5,15 @@ const MuseumCard = ({museum: { id , name, img, rating, opening}}) => {
     
     return (
         <React.Fragment> 
-         <Link to={`/details/${id}`}>
-            <div className="card">
-                {/* <img className="card-img-top" src={img} alt="Card image cap"> */}
-                <div class="card-body">
-                    <h5 class="card-title">{name}</h5>
+         <Link to={`/details/${id}`} >
+            <div className="m-card" style={{ backgroundImage: `url(${img})` }}>
+                <div class="info">
+                    <h5 class="name">{name}</h5>
                    
-                    <div class="card-text">{opening}</div>
-                    <div class="card-text">{rating}</div>
+                   <div className="card-footer"> 
+                        <div class="hours">{opening}</div>
+                        <div class=" ">Rating:{rating}</div>
+                    </div>
                 </div>
             </div>
         </Link>

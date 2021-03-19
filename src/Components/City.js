@@ -1,20 +1,33 @@
-import { useState, useEffect } from "react";
-import Card from "./CityCard.js";
-import Map from "./CityMap.js";
-import YelpNav from "./Navbar";
+
+
+import { useState, useEffect } from 'react';
+import CityCard from  "./CityCard.js";
+import Map from "./CityMap.js"
+import YelpNav from './Navbar';
+
 
 const City = () => {
-  const [museums, setMuseums] = useState([]);
+  const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
 
-  useEffect(() => {
+// const fetchData = () => {
+//     fetch("http://museum-yelp-api.herokuapp.com/api/museums", {
+//       headers: {
+//         "Content-Type": "application/json",
+//         Accept: "application/json",
+//       },
+//     })
+//       .then(res => res.json)
+//       .then(data => setData(data));
+//   };
+
+/*   useEffect(() => {
+ 
     const getMuseums = () => {
       setLoading(true);
       setError();
-      fetch(
-        "https://cdn.discordapp.com/attachments/819961212733358162/822145829016043570/Museums_V01.json"
-      )
+      fetch('.././data.json')
         .then(res => res.json())
         .then(({ museums }) => {
           setMuseums(museums);
@@ -24,22 +37,39 @@ const City = () => {
           setError(err.message);
           setLoading(false);
         });
-    };
-  }, []);
+    }; 
+ 
+ 
+ 
+  }, []);*/
+
+  const museums = data.map(museum => {
+    return {id: museum.id,
+    name: museum.name,
+    img: museum.image,
+    lon: museum.longitude,
+    lat: museum.latitude,
+    link: museum.link,
+    adress: museum.adress
+    }
+  })
+
+  console.log(museums)
 
   return (
     <div>
-      <h1>hello</h1>
-      {/*
+
       <YelpNav />
-      <h1>hello</h1>
       <div className="container">
-        {museums.map(())}
-        {museum.map(museum => 
-        <Card />
-        <Map lat={city.lat} lon={city.lon} />  lat & lon of museums[0] ??
+ 
+        <div className="col">
+         {museums.map((museum) => (<CityCard key={museum.id} museum={museum} />))}
+        </div>
+        <div className="col">
+        <Map museums={museums} />          
+        </div>
       </div>
-      */}
+
     </div>
   );
 };
