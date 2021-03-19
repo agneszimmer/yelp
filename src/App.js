@@ -1,6 +1,7 @@
 import "./App.css";
 import { Switch, Route, Link } from "react-router-dom";
 import Details from "./Components/Details";
+import City from "./components/city";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Route path="/details/:id">
         <Details />
       </Route>
+        <City />
       <Route exact path="/:city"></Route>
     </Switch>
   );
