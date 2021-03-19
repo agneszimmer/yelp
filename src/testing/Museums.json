@@ -4,7 +4,11 @@
       "name":"Museum Erdinge",
       "City":{
 		 "id": 1,
-		 "name":"Berlin",
+		 "name":"Berlin"
+		},
+	  "Rating":{
+		"quantity": "345",
+		"average": "4.6"
 		},
       "Comments":[
 			{
@@ -35,14 +39,19 @@
 		"phone": "155-47723252",
 		"link": "https://www.museumderdinge.de/",
 		"timings": "mon-fri 8am - 6pm",
-		"description": "The Werkbundarchiv – Museum der Dinge (Werkbund Archive – Museum of Things) chronicles the product culture of the 20th and 21st centuries, a culture marked by mass production and industrial manufacturing."  
+		"description": "The Werkbundarchiv – Museum der Dinge (Werkbund Archive – Museum of Things) chronicles the product culture of the 20th and 21st centuries, a culture marked by mass production and industrial manufacturing."
+				
 	},
 	{
       "id": 2,
       "name":"Museum Noname",
       "City":{
 		 "id": 1,
-		 "name":"Braunschweig",
+		 "name":"Braunschweig"
+		},
+	  "Rating":{
+		"quantity": "543",
+		"average": "4.8"
 		},
       "Comments":[
 			{

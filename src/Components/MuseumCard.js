@@ -1,17 +1,21 @@
 import React from "react";
-
-const MuseumCard = () => {
-
+import { Link } from "react-router-dom";
+const MuseumCard = ({museum: { id , name, img, rating, opening}}) => {
+     
+    
     return (
-        <React.Fragment>
-            <div class="card" style="width: 18rem;">
-          {/*   <img class="card-img-top" src="..." alt="Card image cap"> */}
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+        <React.Fragment> 
+         <Link to={`/details/${id}`}>
+            <div className="card">
+                {/* <img className="card-img-top" src={img} alt="Card image cap"> */}
+                <div class="card-body">
+                    <h5 class="card-title">{name}</h5>
+                   
+                    <div class="card-text">{opening}</div>
+                    <div class="card-text">{rating}</div>
+                </div>
             </div>
-            </div>
+        </Link>
         </React.Fragment>
     );
 } 
