@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import Card from  "./CityCard.js";
+import CityCard from  "./CityCard.js";
 import Map from "./CityMap.js"
 import YelpNav from './Navbar';
 
@@ -31,16 +31,15 @@ const City = () => {
 
   return (
     <div>
-      {/*
       <YelpNav />
       <h1>hello</h1>
       <div className="container">
-        {museums.map(())}
-        {museum.map(museum => 
-        <Card />
-        <Map lat={city.lat} lon={city.lon} />  lat & lon of museums[0] ??
+       
+        {museums.map(data => ( <CityCard  key={data.id} prop={data} />)) }
+
+        <Map lat={museums.lat} lon={museums.lon} /> 
       </div>
-      */}
+     
 
     </div>
   );

@@ -1,15 +1,15 @@
 import React, {useState, useEffect} from 'react';
+import { Link } from "react-router-dom";
 
 //components
 import YelpNav from './Navbar';
 import MuseumCard from './MuseumCard';
-
-import data from '../testing/Museums.json';
+/* import data from '../testing/Museums.json'; */
 
 const Homepage = () => {
     const [museums, setMuseums] = useState([]);
    
-   const URL = '.././data.json'
+   const URL = 'http://museum-yelp-api.herokuapp.com/api/museums'
    
    const getData = async () =>{
     try{
@@ -19,19 +19,22 @@ const Homepage = () => {
       console.error(err);
       // Handle errors here
     }
-  }
+  } 
 
+  
   useEffect(() => {
-    /* const amount = '5';
-    const query = getBestMuseum(amount); */
+    //const amount = '5';
+    //const query = getBestMuseum(amount);
     getData()
-    .then(res => {
+    .then(data => {
+        console.log(data)
         const museums =  data.map(item => {
             return {
+                city : item.name,
                 id : item.id,
-                name: item.name,
+                name: item.museumname,
                 img : item.image,
-                rating : item.Rating.average,
+                rating : item.rating,
                 opening : item.timings
 
             }
@@ -53,11 +56,20 @@ const handleChange = () =>{
             <header style={{ backgroundImage: `url(${imageURL})` }}>
                 <YelpNav /> 
                 <div className="Msearch">
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="text" onChange={handleChange} />
-                        <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>    
+                    <div>
+                    <form className="form-inline my-2 my-lg-0">
+                        <input className="form-control mr-sm-2" type="text" onChange={handleChange} />
+                        <button className="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+                    </form> 
+                    </div>   
+                     {/* { museums.map((museum) => ( <Link to={`/city/${museum.city}`}> {museum.city} </Link>))} */}
+                     <div className="city-links">
+                     <Link to={`/city/Berlin`}> Berlin </Link>
+                     <Link to={`/city/Hanover`}> Hanover </Link>
+                     <Link to={`/city/Braunschweig`}> Braunschweig </Link>
+                     </div>
                 </div>
+               
                 
             </header>
             <div className="homeContent">

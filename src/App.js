@@ -21,7 +21,7 @@ function App() {
             <Details />
           </Route>
 
-          <Route exact path="/:city"></Route>
+          <Route exact path=":city"></Route>
           <City />
         </Switch>
       </React.Fragment>
