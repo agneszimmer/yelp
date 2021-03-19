@@ -1,19 +1,31 @@
 import React from "react";
 import "./App.css";
 import { Switch, Route, Link } from "react-router-dom";
-import Details from "./components/Details";
-import City from "./components/City";
+
+
+//components
+import Details from "./Components/Details";
+import City from "./Components/City";
+import Homepage from "./Components/Homepage";
+import "./App.css";
 
 function App() {
   return (
-    <Switch>
-      <Route exact path="/"></Route>
-      <Route path="/details/:id">
-        <Details />
-      </Route>
-        <City />
-      <Route exact path="/:city"></Route>
-    </Switch>
+    <div className="App">
+      <React.Fragment>
+        <Switch>
+          <Route exact path="/" render={() => <Homepage />} />
+          {/*  <Route exact path="/details/:id" render={ (props)=> <Details {...props} /> } /> */}
+
+          <Route path="/details/:id">
+            <Details />
+          </Route>
+
+          <Route exact path="/:city"></Route>
+          <City />
+        </Switch>
+      </React.Fragment>
+    </div>
 
   );
 }

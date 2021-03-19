@@ -1,8 +1,29 @@
 import React from "react";
 import IndiMuseumInfo from "./IndiMuseumInfo";
 import IndiMuseumMap from "./IndiMuseumMap";
+import { useEffect, useState } from "react";
 
 const Details = () => {
+  const [data, setData] = useState([]);
+  const getData = () => {
+    fetch(".././data.json", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    })
+      .then(function (response) {
+        console.log(response);
+        return response.json();
+      })
+      .then(function (myJson) {
+        console.log(myJson);
+      });
+  };
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <div className="container">
       <div className="row">
