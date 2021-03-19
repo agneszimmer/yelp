@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
 import { Switch, Route, Link } from "react-router-dom";
-import Details from "./components/Details";
-import City from "./components/City";
+import Details from "./Components/Details";
+import City from "./Components/City";
 
 function App() {
   return (
