@@ -2,3 +2,29 @@
   width: auto;
   height: 25rem;
 }
+
+header {
+  background-size: cover;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+header > .bg-light {
+  background-color: transparent!important;
+}
+header > .bg-light .navbar-brand, header > .bg-light .navbar-light {
+  font-size: 2rem;
+  color:rgb(180, 97, 2)!important;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.Msearch {
+  display: flex;   
+  justify-content: center;
+ margin-bottom: 5rem; 
+}
