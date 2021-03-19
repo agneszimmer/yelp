@@ -14,7 +14,7 @@ const CityMap = ({ lat, lon }) => {
             <a href={museum.link}>{museum.name}</a>
           </Popup>
         </Marker>} */}
-      </MapContainer>
+ {/*      </MapContainer> */}
         */}
     </div>
   );
