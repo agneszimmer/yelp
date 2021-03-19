@@ -1,8 +1,7 @@
 .leaflet-container {
   width: auto;
-  height: 25rem;
+  height: 40rem;
 }
-
 
 header {
   background-size: cover;
@@ -10,52 +9,56 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
 }
 
 header > .bg-light {
-  background-color: transparent!important;
+  background-color: transparent !important;
 }
-header > .bg-light .navbar-brand, header > .bg-light .navbar-light {
+header > .bg-light .navbar-brand,
+header > .bg-light .navbar-light {
   font-size: 2rem;
-  color:rgb(180, 97, 2)!important;
+  color: rgb(180, 97, 2) !important;
   background: rgba(255, 255, 255, 0.2);
   padding: 5px 15px;
   border-radius: 5px;
 }
 
 .Msearch {
-  display: flex;   
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
- margin-bottom: 5rem; 
- gap: 0.5rem;
- 
+  margin-bottom: 5rem;
+  gap: 0.5rem;
 }
 
-.museums-best{
+.card-img {
+  width: 6rem;
+  height: 6rem;
+  margin: 0.5rem;
+}
+
+.museums-best {
   padding: 2rem 10rem;
-  display:flex;
+  display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
 }
 
-.m-card{
+.m-card {
   height: 50px;
   width: 50ch;
-  display:flex;
+  display: flex;
   padding: 1rem 1rem 0.5rem 1rem;
   height: 15ch;
   background-color: rgb(43, 226, 202);
   background-size: cover;
   background-position: center;
-  
 }
 .m-card .info {
   display: flex;
-  flex:1;
+  flex: 1;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -66,22 +69,20 @@ header > .bg-light .navbar-brand, header > .bg-light .navbar-light {
   justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.486);
 }
-.card-footer .hours{
+.card-footer .hours {
   color: rgb(0, 24, 245);
   font-weight: 500;
 }
 
-.museums-best   a {
-  
-    text-decoration: none;
-    color:rgb(0, 0, 0);
- 
+.museums-best a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
 }
 
-.city-links{
+.city-links {
   display: flex;
   gap: 1rem;
-  
+
   background-color: rgb(0, 0, 0);
   font-weight: 700;
 }
@@ -89,7 +90,7 @@ header > .bg-light .navbar-brand, header > .bg-light .navbar-light {
   padding: 0 1rem;
   text-decoration: none;
   color: white;
- }
+}
 .city-links a:hover {
   background-color: red;
 }

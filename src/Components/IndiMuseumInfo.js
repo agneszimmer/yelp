@@ -1,16 +1,29 @@
 import React from "react";
+import { useState } from "react";
 
-const IndiMuseumInfo = () => {
+const IndiMuseumInfo = ({
+  data: {
+    name,
+    address,
+    phone,
+    link,
+    timings,
+    rating,
+    description,
+    id,
+    comment,
+  },
+}) => {
   return (
     <div>
-      <h2>Museum Name</h2>
-      <p>Museum Address</p>
-      <p>Telephone Number</p>
-      <p>Website Link</p>
-      <p>Opening Hours</p>
-      <p>Tags</p>
-      <p>Rating</p>
-      <p>Short Description</p>
+      <h2>{name}</h2>
+      <p>Address: {address}</p>
+      <p>Phone: {phone}</p>
+      <p>Website: {link}</p>
+      <p>Opening Hours: {timings}</p>
+      <p>Average Rating: {rating}</p>
+      <p>Comments: {comment}</p>
+      <p>{description}</p>
     </div>
   );
 };
