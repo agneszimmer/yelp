@@ -14,9 +14,7 @@ const City = () => {
     const getMuseums = () => {
       setLoading(true);
       setError();
-      fetch(
-        "https://cdn.discordapp.com/attachments/819961212733358162/822145829016043570/Museums_V01.json"
-      )
+      fetch('.././data.json')
         .then(res => res.json())
         .then(({ museums }) => {
           setMuseums(museums);

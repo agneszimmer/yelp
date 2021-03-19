@@ -4,13 +4,11 @@ import React, {useState, useEffect} from 'react';
 import YelpNav from './Navbar';
 import MuseumCard from './MuseumCard';
 
-import data from '../testing/Museums.json';
-
 const Homepage = () => {
     const [museums, setMuseums] = useState([]);
    
    const URL = '.././data.json'
-   
+
    const getData = async () =>{
     try{
       let response = await fetch(URL);
