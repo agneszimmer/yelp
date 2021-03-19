@@ -22,7 +22,7 @@ const City = () => {
 //   };
 
   useEffect(() => {
-<<<<<<< HEAD
+ 
     const getMuseums = () => {
       setLoading(true);
       setError();
@@ -37,12 +37,12 @@ const City = () => {
           setLoading(false);
         });
     };
-=======
-    fetch('http://museum-yelp-api.herokuapp.com/api/museums')
+ 
+    /* fetch('http://museum-yelp-api.herokuapp.com/api/museums')
 	    .then(response => response.json())
 	    .then(data => setData(data))
-	    .catch(err => console.error(err));
->>>>>>> 7b014c180bb697f7f4dc4babb31ba8e1b86771ae
+	    .catch(err => console.error(err)); */
+ 
   }, []);
 
   const museums = data.map(museum => {
@@ -62,6 +62,7 @@ const City = () => {
     <div>
       <YelpNav />
       <div className="container">
+<<<<<<< HEAD
         <div className="col">
          {museums.map((museum) => (<CityCard key={museum.id} museum={museum} />))}
         </div>
@@ -70,6 +71,14 @@ const City = () => {
         </div>
       </div>
     
+=======
+       
+        {museums.map(data => ( <CityCard  key={data.id} prop={data} />)) }
+
+        <Map lat={museums.lat} lon={museums.lon} /> 
+      </div>
+     
+>>>>>>> homepage-helder
 
     </div>
   );

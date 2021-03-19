@@ -20,10 +20,11 @@ function App() {
           <Route path="/details/:id">
             <Details />
           </Route>
-
-          <Route exact path="/city">
-          <City />
+          
+          <Route exact path=":city">
+            <City />
           </Route>
+
         </Switch>
       </React.Fragment>
     </div>
