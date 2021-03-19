@@ -3,8 +3,9 @@ import "./App.css";
 import { Switch, Route, Link } from "react-router-dom";
 
 //components
-import Details from "./Components/Details";
-import Homepage from './Components/Homepage';
+import Details from "./components/Details";
+import City from "./components/City";
+import Homepage from './components/Homepage';
 import './App.css';
 
 function App() {
@@ -21,8 +22,7 @@ function App() {
           </Route>
 
           <Route exact path="/:city"></Route>
-         {/*  <Route path="*" component={PageNotFound} /> */}
-         
+            <City />          
         </Switch>
 
       </React.Fragment>
