@@ -1,16 +1,28 @@
 
 import { useState, useEffect } from 'react';
-import Card from  "./CityCard.js";
+import CityCard from  "./CityCard.js";
 import Map from "./CityMap.js"
 import YelpNav from './Navbar';
 
 
 const City = () => {
-  const [museums, setMuseums] = useState([]);
+  const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
 
+// const fetchData = () => {
+//     fetch("http://museum-yelp-api.herokuapp.com/api/museums", {
+//       headers: {
+//         "Content-Type": "application/json",
+//         Accept: "application/json",
+//       },
+//     })
+//       .then(res => res.json)
+//       .then(data => setData(data));
+//   };
+
   useEffect(() => {
+<<<<<<< HEAD
     const getMuseums = () => {
       setLoading(true);
       setError();
@@ -25,20 +37,39 @@ const City = () => {
           setLoading(false);
         });
     };
+=======
+    fetch('http://museum-yelp-api.herokuapp.com/api/museums')
+	    .then(response => response.json())
+	    .then(data => setData(data))
+	    .catch(err => console.error(err));
+>>>>>>> 7b014c180bb697f7f4dc4babb31ba8e1b86771ae
   }, []);
+
+  const museums = data.map(museum => {
+    return {id: museum.id,
+    name: museum.name,
+    img: museum.image,
+    lon: museum.longitude,
+    lat: museum.latitude,
+    link: museum.link,
+    adress: museum.adress
+    }
+  })
+
+  console.log(museums)
 
   return (
     <div>
-      {/*
       <YelpNav />
-      <h1>hello</h1>
       <div className="container">
-        {museums.map(())}
-        {museum.map(museum => 
-        <Card />
-        <Map lat={city.lat} lon={city.lon} />  lat & lon of museums[0] ??
+        <div className="col">
+         {museums.map((museum) => (<CityCard key={museum.id} museum={museum} />))}
+        </div>
+        <div className="col">
+        <Map museums={museums} />          
+        </div>
       </div>
-      */}
+    
 
     </div>
   );

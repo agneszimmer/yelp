@@ -4,6 +4,7 @@ import React, {useState, useEffect} from 'react';
 import YelpNav from './Navbar';
 import MuseumCard from './MuseumCard';
 
+ 
 const Homepage = () => {
     const [museums, setMuseums] = useState([]);
    
@@ -23,7 +24,7 @@ const Homepage = () => {
     /* const amount = '5';
     const query = getBestMuseum(amount); */
     getData()
-    .then(res => {
+    .then(data => {
         const museums =  data.map(item => {
             return {
                 id : item.id,
@@ -31,6 +32,7 @@ const Homepage = () => {
                 img : item.image,
                 rating : item.Rating.average,
                 opening : item.timings
+
 
             }
         });
@@ -42,7 +44,7 @@ const Homepage = () => {
 const handleChange = () =>{
 
 }
-    
+
     const imageURL = 'https://res.cloudinary.com/bizzaboprod/image/upload/c_crop,g_custom,f_auto/v1542992626/hki29iojivas3t9w0suu.jpg';
 
     return (
