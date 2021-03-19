@@ -3,8 +3,8 @@ import "./App.css";
 import { Switch, Route, Link } from "react-router-dom";
 
 //components
-import Details from "./Components/Details";
-import Homepage from './Components/Homepage';
+import Details from "./components/Details";
+import Homepage from './components/Homepage';
 import './App.css';
 
 function App() {

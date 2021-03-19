@@ -16,4 +16,4 @@ const MuseumCard = () => {
     );
 } 
 export default MuseumCard;
->>>>>>> b88a718c446957d9943689390a1ea8bca78e837a
+

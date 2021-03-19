@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
-import "./city.css";
-import Card from ""../CityCard.js";
-import Map from "..CityMap.js"
+import Card from  "./CityCard.js";
+import Map from "./CityMap.js"
 
 const City = () => {
     const [museums, setMuseums] = useState([]) 
@@ -22,17 +21,19 @@ useEffect(() => {
           setError(err.message);
           setLoading(false);
         });
-  };
-   
+  };  
 }, []);
-
-
 
 return (
   <div>
     <Header />
-    {museum.map(museum => <Card />
-    <Map lat={lat} lon={array.lon} />   
+    <div className="container">
+     { /*{museum.map(museum => */}
+      <Card />
+      <Map lat={lat} lon={museums.lon} /> 
+    </div>
+  
   </div>)
-  }
+}
 
+export default City

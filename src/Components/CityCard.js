@@ -1,4 +1,4 @@
-const Card = ({museum. {name, img, link, theme}}) => {
+const CityCard = ({name, img, link, theme}) => {
     return (
         <div className='row'>
             <div className='col'>
@@ -12,4 +12,4 @@ const Card = ({museum. {name, img, link, theme}}) => {
         );
 };
 
-export default Card;
+export default CityCard;

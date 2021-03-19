@@ -19,4 +19,4 @@ const CityMap = ({ lat, lon }) => {
   );
 };
 
-export default Map;
+export default CityMap;
