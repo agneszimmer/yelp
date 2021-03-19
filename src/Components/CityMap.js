@@ -8,11 +8,11 @@ const CityMap = ({ lat, lon }) => {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
         />
-        {museums.map(museum => <Marker position={[lat, lon]}>
+        {/* {museums.map(museum => {<Marker position={[lat, lon]}>
           <Popup>
             <a href={museum.link}>{museum.name}</a>
           </Popup>
-        </Marker>}
+        </Marker>} */}
       </MapContainer>
     </div>
   );

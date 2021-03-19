@@ -3,9 +3,9 @@ import "./App.css";
 import { Switch, Route } from "react-router-dom";
 
 //components
-import Details from "./components/Details";
-import City from "./components/City";
-import Homepage from './components/Homepage';
+import Details from "./Components/Details";
+import City from "./Components/City";
+import Homepage from './Components/Homepage';
 import './App.css';
 
 function App() {
