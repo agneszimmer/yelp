@@ -7,48 +7,43 @@ import MuseumCard from './MuseumCard';
 import data from '../testing/Museums.json';
 
 const Homepage = () => {
-    const [best, setBest] = useState([]);
-    console.log(data)
-    
-    const museums =  data.map(item => {
-        return {
-            id : item.id,
-            name: item.name,
-            img : item.image,
-            rating : item.Rating.average,
-            opening : item.timings
-
-        }
-    });
+    const [museums, setMuseums] = useState([]);
    
+   const URL = '.././data.json'
+   
+   const getData = async () =>{
+    try{
+      let response = await fetch(URL);
+      return await response.json();
+    }catch(err){
+      console.error(err);
+      // Handle errors here
+    }
+  }
 
-    /* const URL = ''
-    const getData = async (query) => {
-        const res = await fetch( URL).then(response => response.text())
-        return await res.json()
-      }
+  useEffect(() => {
+    /* const amount = '5';
+    const query = getBestMuseum(amount); */
+    getData()
+    .then(res => {
+        const museums =  data.map(item => {
+            return {
+                id : item.id,
+                name: item.name,
+                img : item.image,
+                rating : item.Rating.average,
+                opening : item.timings
 
-    useEffect(() => {
-        const amount = '';
-        const query = getBestMuseum(amount);
-        getData(query)
-        .then(res => { 
-            const museum  = res.data.museum.map(info => {
-                return {
-                    img : info.url,
-                    name: info.name,
-                    location: info.city,
-                    stars: info.rating,
-                    id: info.id                    
-                }
-            });
-            setBest(museum);
-        }); 
+            }
+        });
+        setMuseums(museums);
+    });
+}, []);
+ 
 
-    }, []); */
+const handleChange = () =>{
 
-
-
+}
     
     const imageURL = 'https://res.cloudinary.com/bizzaboprod/image/upload/c_crop,g_custom,f_auto/v1542992626/hki29iojivas3t9w0suu.jpg';
 
@@ -59,7 +54,7 @@ const Homepage = () => {
                 <YelpNav /> 
                 <div className="Msearch">
                     <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="text" value='{state.value}' onChange='{handleChange}' />
+                        <input class="form-control mr-sm-2" type="text" onChange={handleChange} />
                         <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
                     </form>    
                 </div>
