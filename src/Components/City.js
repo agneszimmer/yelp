@@ -1,9 +1,7 @@
-
-import { useState, useEffect } from 'react';
-import Card from  "./CityCard.js";
-import Map from "./CityMap.js"
-import YelpNav from './Navbar';
-
+import { useState, useEffect } from "react";
+import Card from "./CityCard.js";
+import Map from "./CityMap.js";
+import YelpNav from "./Navbar";
 
 const City = () => {
   const [museums, setMuseums] = useState([]);
@@ -31,6 +29,7 @@ const City = () => {
 
   return (
     <div>
+      <h1>hello</h1>
       {/*
       <YelpNav />
       <h1>hello</h1>
@@ -41,10 +40,8 @@ const City = () => {
         <Map lat={city.lat} lon={city.lon} />  lat & lon of museums[0] ??
       </div>
       */}
-
     </div>
   );
 };
 
 export default City;
-
