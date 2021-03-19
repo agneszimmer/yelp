@@ -4,7 +4,7 @@ import React, {useState, useEffect} from 'react';
 import YelpNav from './Navbar';
 import MuseumCard from './MuseumCard';
 
-/* import data from '../testing/Museums.json'; */
+const data = ".././data.json";
 
 const Homepage = () => {
     const [museums, setMuseums] = useState([]);
@@ -34,6 +34,7 @@ const Homepage = () => {
                 rating : item.Rating.average,
                 opening : item.timings
 
+
             }
         });
         setMuseums(museums);
@@ -44,7 +45,7 @@ const Homepage = () => {
 const handleChange = () =>{
 
 }
-    
+
     const imageURL = 'https://res.cloudinary.com/bizzaboprod/image/upload/c_crop,g_custom,f_auto/v1542992626/hki29iojivas3t9w0suu.jpg';
 
     return (
