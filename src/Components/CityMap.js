@@ -1,8 +1,9 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 const CityMap = ({ lat, lon }) => {
   return (
     <div>
+      {/*
       <MapContainer center={[lat, lon]} zoom={13} scrollWheelZoom={false}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -14,6 +15,7 @@ const CityMap = ({ lat, lon }) => {
           </Popup>
         </Marker>}
       </MapContainer>
+        */}
     </div>
   );
 };
