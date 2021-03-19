@@ -9,9 +9,9 @@ const yelpNav = () => {
     return (
 
 
-        <nav class="navbar navbar-light bg-light">
+        <nav className="navbar navbar-light bg-light">
             <NavLink id="RouterNavLink" to="/"> 
-                <span class="navbar-brand mb-0 h1">MusYelp</span>
+                <span className="navbar-brand mb-0 h1">MiniYelp</span>
             </NavLink>
         </nav>
 
